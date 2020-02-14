@@ -1,0 +1,61 @@
+{
+  "name": "default-server",
+  "version": "1.0.0",
+  "description": "default server using NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix \"{,!(node_modules)/**/}*.{js,jsx}\"",
+    "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{js,jsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackinno/default-server.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "nodejs",
+    "express",
+    "javascript"
+  ],
+  "author": "Thotsaphon Ruthamnong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackinno/default-server/issues"
+  },
+  "homepage": "https://github.com/blackinno/default-server#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "lint-staged": {
+    "./**/*.{js}": [
+      "eslint --fix",
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
