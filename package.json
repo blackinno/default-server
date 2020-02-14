@@ -48,7 +48,7 @@
     "morgan": "^1.9.1"
   },
   "lint-staged": {
-    "./**/*.{js}": [
+    "*.{js}": [
       "eslint --fix",
       "prettier-eslint --write",
       "git add"
